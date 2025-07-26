@@ -1,0 +1,563 @@
+/* Load font if not already */
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
+/* Apply globally */
+body,
+p,
+li,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+.navbar,
+.section-title {
+  font-family: "Poiret One", sans-serif !important;
+}
+
+body {
+  /* font-family: "Poiret One" ,cursive; */
+  font-family: "Poiret One", cursive;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.hero {
+  background: url(...jpg) no-repeat center center/cover;
+  height: 80vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease-out;
+}
+.hero p {
+  animation: fadeInUp 1.5s ease-out;
+}
+.btn,
+.btn-primary,
+.btn-danger,
+.btn-outline-primary {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover,
+.btn-primary:hover,
+.btn-danger:hover,
+.btn-outline-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add smooth scrolling spacing */
+section {
+  padding-top: 80px;
+}
+
+/* Footer styling */
+footer {
+  background: #002244;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Ticker styling aligned with aesthetic */
+.marquee-wrapper {
+  background-color: #0b2545 !important;
+  color: white !important;
+  font-family: "Poiret One", cursive !important;
+  font-size: 13px !important;
+  padding: 4px 10px !important;
+  height: 28px !important;
+  overflow: hidden !important;
+  line-height: 1.2 !important;
+}
+
+.marquee-wrapper marquee {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  color: white !important;
+  line-height: 1.2 !important;
+}
+
+.hero-banner {
+  background: url("https://www.globalgovernanceproject.org/wp-content/uploads/2022/06/Trudeau.jpg")
+    center center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay for text visibility */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  font-family: "Poiret One", cursive;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.hero-content .btn {
+  font-weight: bold;
+  font-size: 1rem;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+.navbar,
+.navbar.bg-dark,
+.navbar.navbar-dark {
+  background-color: #0b2545 !important;
+  border: none;
+  box-shadow: none;
+}
+.navbar-nav .nav-link {
+  margin-left: 15px;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+ul.highlight-list {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+ul.highlight-list li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Speakers page */
+/* Hero banner */
+.hero-banner {
+  background: url("../images/speakers-hero.jpg") no-repeat center center/cover;
+  height: 280px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hero-banner h1 {
+  font-size: 36px;
+  font-family: "Lora", serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumb {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #eee;
+}
+
+.breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.light-bg {
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-family: "Archivo", sans-serif;
+}
+
+/* Speaker grid */
+.speaker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.speaker-card {
+  text-align: center;
+}
+
+.speaker-card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #ccc;
+}
+
+.speaker-card h4 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Archivo", sans-serif;
+}
+
+.speaker-card p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* main */
+
+.hero-banner {
+  background: url("https://www.globalgovernanceproject.org/wp-content/uploads/2022/06/Trudeau.jpg")
+    center center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  font-family: "Poiret One", cursive;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-content .btn {
+  margin-top: 20px;
+  font-weight: bold;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar,
+.navbar.bg-dark,
+.navbar.navbar-dark {
+  background-color: #031926 !important;
+}
+
+.navbar-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 12px 40px;
+  color: rgb(0, 0, 0);
+  flex-wrap: wrap;
+}
+.navbar-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 40px;
+  gap: 20px;
+}
+
+.navbar-brand-logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* track */
+.tracks-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Lora", serif;
+  background: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1d1d1f;
+}
+
+.section-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.track-box {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.track-box:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.track-box h3 {
+  font-size: 18px;
+  color: #005a8d;
+  margin-bottom: 15px;
+}
+
+.track-box ul {
+  padding-left: 18px;
+}
+
+.track-box li {
+  line-height: 1.6;
+  font-size: 15px;
+  color: #444;
+}
+
+/* speakers */
+.speaker-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Keeps it square */
+  object-fit: cover;
+  border-radius: 0; /* Removes the circular shape */
+  border: 1px solid #ccc;
+}
+
+.speaker-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* ensures center alignment */
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.speaker-card {
+  width: 180px;
+  text-align: center;
+}
+
+.speaker-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0; /* make square */
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+}
+
+.speaker-card h4 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+.speaker-card p {
+  font-size: 14px;
+  color: #444;
+}
+
+/* index.html */
+#call h3,
+#topics h2 {
+  font-weight: 600;
+}
+
+#topics ul li {
+  margin-bottom: 6px;
+}
+
+/* for phone */
+@media (max-width: 768px) {
+  /* Styles here apply to tablets and phones */
+}
+
+@media (max-width: 768px) {
+  .navbar,
+  .navbar-custom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .navbar-nav a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .register-btn {
+    align-self: center;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .track-grid {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .track-box {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .speaker-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .speaker-card {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .hero h1,
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero p,
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero,
+  .hero-banner {
+    height: 60vh;
+    padding: 20px;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .track-grid > .track-box:last-child:nth-child(odd) {
+    justify-self: center;
+  }
+}
